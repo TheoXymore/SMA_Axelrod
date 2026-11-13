@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cjecbd4ewmmw"]
+
+[ext_resource type="Script" uid="uid://b73qhkvvsa6ja" path="res://Tournois.gd" id="1_s4a64"]
+[ext_resource type="Script" uid="uid://dpyclsjsds12i" path="res://Strategies/Tit_for_tat.gd" id="2_5ay0o"]
+[ext_resource type="Script" uid="uid://esi1dk3ead0b" path="res://Strategies/Random.gd" id="3_3euse"]
+[ext_resource type="Script" uid="uid://sc5v2avrovcl" path="res://Strategies/All_D.gd" id="4_dc6ev"]
+[ext_resource type="Script" uid="uid://db8y7r65xgayd" path="res://Strategies/Joss.gd" id="5_yecug"]
+[ext_resource type="Script" uid="uid://b7f22w2j3hkd" path="res://Strategies/Tester.gd" id="6_xey10"]
+[ext_resource type="Script" uid="uid://cemwq6g2455e" path="res://Strategies/Pigeon.gd" id="7_5ay0o"]
+[ext_resource type="Script" uid="uid://cllj6qn4i7cu6" path="res://Strategies/Indecis.gd" id="8_3euse"]
+
+[node name="Tournois" type="Node" unique_id=471526868 node_paths=PackedStringArray("Joueurs")]
+script = ExtResource("1_s4a64")
+Joueurs = [NodePath("TitForTat"), NodePath("Random"), NodePath("Joss"), NodePath("All_D"), NodePath("Tester"), NodePath("Pigeon"), NodePath("Indecis")]
+nb_tours = 200
+metadata/_custom_type_script = "uid://b73qhkvvsa6ja"
+
+[node name="TitForTat" type="Node" parent="." unique_id=499246925]
+script = ExtResource("2_5ay0o")
+metadata/_custom_type_script = "uid://dpyclsjsds12i"
+
+[node name="Random" type="Node" parent="." unique_id=74710283]
+script = ExtResource("3_3euse")
+metadata/_custom_type_script = "uid://esi1dk3ead0b"
+
+[node name="All_D" type="Node" parent="." unique_id=731933564]
+script = ExtResource("4_dc6ev")
+metadata/_custom_type_script = "uid://sc5v2avrovcl"
+
+[node name="Joss" type="Node" parent="." unique_id=570561640]
+script = ExtResource("5_yecug")
+metadata/_custom_type_script = "uid://db8y7r65xgayd"
+
+[node name="Tester" type="Node" parent="." unique_id=1383299191]
+script = ExtResource("6_xey10")
+metadata/_custom_type_script = "uid://b7f22w2j3hkd"
+
+[node name="Pigeon" type="Node" parent="." unique_id=736043784]
+script = ExtResource("7_5ay0o")
+metadata/_custom_type_script = "uid://cemwq6g2455e"
+
+[node name="Indecis" type="Node" parent="." unique_id=1256070506]
+script = ExtResource("8_3euse")
+metadata/_custom_type_script = "uid://cllj6qn4i7cu6"
