@@ -12,7 +12,7 @@ func _to_string() -> String:
 
 func jouer()->Choix:
 	#Tour 1 :
-	if mesChoix.size()==0:
+	if adversaireChoix.size()==0:
 		return Choix.DEFERER
 		
 	#Tours suivants :
@@ -20,7 +20,7 @@ func jouer()->Choix:
 	if tft:
 		choix = adversaireChoix[-1]
 	else : 
-		if mesChoix.size()%3 == 0:
+		if adversaireChoix.size()%3 == 0:
 			choix = Choix.DEFERER
 		else : 
 			choix = Choix.COOPERER

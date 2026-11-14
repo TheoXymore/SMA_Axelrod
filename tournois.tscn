@@ -9,10 +9,10 @@
 [ext_resource type="Script" uid="uid://cemwq6g2455e" path="res://Strategies/Pigeon.gd" id="7_5ay0o"]
 [ext_resource type="Script" uid="uid://cllj6qn4i7cu6" path="res://Strategies/Indecis.gd" id="8_3euse"]
 
-[node name="Tournois" type="Node" unique_id=471526868 node_paths=PackedStringArray("Joueurs")]
+[node name="Tournois" type="Node" unique_id=471526868]
 script = ExtResource("1_s4a64")
-Joueurs = [NodePath("TitForTat"), NodePath("Random"), NodePath("Joss"), NodePath("All_D"), NodePath("Tester"), NodePath("Pigeon"), NodePath("Indecis")]
 nb_tours = 200
+random_seed = 200
 metadata/_custom_type_script = "uid://b73qhkvvsa6ja"
 
 [node name="TitForTat" type="Node" parent="." unique_id=499246925]
@@ -35,10 +35,10 @@ metadata/_custom_type_script = "uid://db8y7r65xgayd"
 script = ExtResource("6_xey10")
 metadata/_custom_type_script = "uid://b7f22w2j3hkd"
 
-[node name="Pigeon" type="Node" parent="." unique_id=736043784]
+[node name="Pigeon" type="Node" parent="." unique_id=109530294]
 script = ExtResource("7_5ay0o")
 metadata/_custom_type_script = "uid://cemwq6g2455e"
 
-[node name="Indecis" type="Node" parent="." unique_id=1256070506]
+[node name="Indecis" type="Node" parent="." unique_id=1614394919]
 script = ExtResource("8_3euse")
 metadata/_custom_type_script = "uid://cllj6qn4i7cu6"

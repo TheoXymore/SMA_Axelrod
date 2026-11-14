@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://b7xh0xk5c3qk"]
+
+[ext_resource type="Script" uid="uid://diuu8mlv8dcqr" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="PackedScene" uid="uid://cjecbd4ewmmw" path="res://tournois.tscn" id="2_mae5d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsdsd"]
+bg_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(0, 0, 0, 0.28627452)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 0.28627452)
+
+[node name="Menu" type="Panel" unique_id=1704919924]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jsdsd")
+script = ExtResource("1_ouk20")
+
+[node name="Tournois" parent="." unique_id=471526868 instance=ExtResource("2_mae5d")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1039985591]
+custom_minimum_size = Vector2(0, 648)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="ListeDispo" type="VBoxContainer" parent="HBoxContainer" unique_id=1422508408]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="ListeJoueurs" type="VBoxContainer" parent="HBoxContainer" unique_id=823190500]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Paramètres" type="VBoxContainer" parent="HBoxContainer" unique_id=256377715]
+layout_mode = 2
+alignment = 1
+
+[node name="Tours" type="HBoxContainer" parent="HBoxContainer/Paramètres" unique_id=223282603]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Paramètres/Tours" unique_id=473114779]
+layout_mode = 2
+text = "Tours :"
+
+[node name="SpinTours" type="SpinBox" parent="HBoxContainer/Paramètres/Tours" unique_id=506211346]
+layout_mode = 2
+max_value = 1000.0
+
+[node name="Seed" type="HBoxContainer" parent="HBoxContainer/Paramètres" unique_id=907160279]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Paramètres/Seed" unique_id=1336548611]
+layout_mode = 2
+text = "Seed :  "
+
+[node name="SpinSeed" type="SpinBox" parent="HBoxContainer/Paramètres/Seed" unique_id=1235468177]
+layout_mode = 2
+max_value = 100000.0
+
+[node name="Gains" type="VBoxContainer" parent="HBoxContainer/Paramètres" unique_id=1993904152]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Paramètres/Gains" unique_id=581307875]
+layout_mode = 2
+text = "Matrice de gains : "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=939697511]
+layout_mode = 2
+alignment = 1
+
+[node name="BoutonLancer" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=2067208103]
+layout_mode = 2
+text = "Lancer"
+
+[node name="Sortie" type="RichTextLabel" parent="HBoxContainer" unique_id=1980368496]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")

@@ -16,9 +16,7 @@ enum Choix{
 	DEFERER=1
 }
 
-var mesChoix: Array[Choix]
 var adversaireChoix: Array[Choix]
-
 
 
 ##Le nombre de parties gagnées dans le tournois
@@ -29,16 +27,14 @@ var scoreBO5:int
 var scorePartie:int
 
 #Calcul de la moyenne
+var score:int = 0
 var scoreMoyen:float = 0
 var tours_joues:int = 0
 
-func add_step(step:Vector2i)->void:
-	mesChoix.append(step.x)
-	adversaireChoix.append(step.y)
+
 
 func init()-> void:
 	scorePartie = 0
-	mesChoix.clear()
 	adversaireChoix.clear()
 
 ##Fonction de sélection de l'action : Déférer ou Coopérer
@@ -49,3 +45,8 @@ func bruit(choix:Choix)->Choix:
 	if rng.randi()%20 ==0:
 		return Choix.DEFERER if choix == Choix.COOPERER else Choix.COOPERER
 	return choix
+	
+func add_score(points:int):
+	score+=points
+	scorePartie+=points
+	

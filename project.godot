@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="SMA_Axelrod"
-run/main_scene="uid://cjecbd4ewmmw"
+run/main_scene="uid://b7xh0xk5c3qk"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1300
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
