@@ -1,3 +1,15 @@
-# Godot 4+ specific ignores
+# Cache et fichiers générés par Godot (se régénère à l'ouverture du projet)
 .godot/
-/android/
+
+# Données d'éditeur propres à chaque utilisateur
+.nomedia
+
+# Exports (l'exécutable pour ton prof ne se versionne pas : il va dans une Release GitHub)
+build/
+export/
+*.exe
+*.pck
+*.x86_64
+*.app
+*.dmg
+*.zip
