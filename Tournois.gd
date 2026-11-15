@@ -38,6 +38,7 @@ func init()->void:
 		else :
 			get_child(i).rng.seed = random_seed
 			
+		get_child(i).score = 0
 		get_child(i).scoreTotal = 0
 		get_child(i).scoreBO5 = 0
 		get_child(i).scorePartie = 0
@@ -128,4 +129,4 @@ func comparer_scores_victoire(a: Strategie, b: Strategie) -> bool:
 
 func afficher_resultats(Joueurs:Array[Node])->void:
 	for joueur in Joueurs:
-		ecrire(joueur, " : ",joueur.score, " points, ", joueur.scoreMoyen, " points en moyenne, ", joueur.scoreTotal, " victoires")
+		ecrire(joueur, " : ",joueur.score, " points, ", "%.3f" % joueur.scoreMoyen, " points en moyenne, ", joueur.scoreTotal, " victoires")
